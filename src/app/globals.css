@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0A0A0A;
+  --color-neon-green: #00FF41;
+  --color-cyber-blue: #00D1FF;
+  --color-electric-purple: #BD00FF;
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-code);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-obsidian text-white font-sans selection:bg-neon-green selection:text-black;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.5), 0 0 20px rgba(0, 255, 65, 0.3);
+  }
+  .bg-glow {
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  }
+  .glass {
+    @apply bg-obsidian/60 backdrop-blur-md border border-white/10;
+  }
+}
