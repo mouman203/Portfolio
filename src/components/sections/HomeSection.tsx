@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Terminal } from "lucide-react";
+import Image from "next/image";
+import MoumanePhoto from "@/assets/Moumane.jpeg";
 
 const FloatingBadge = ({
   title,
@@ -94,11 +96,12 @@ export default function HomeSection() {
             <div className="absolute inset-4 border border-cyber-blue/30 rounded-full animate-[spin_20s_linear_infinite_reverse]"></div>
 
             <div className="absolute inset-8 rounded-full overflow-hidden border-2 border-neon-green bg-black shrink-0 shadow-[0_0_30px_rgba(0,255,65,0.2)]">
-              {/* Fallback avatar if no photo is provided, but user said "professional photo", so we use an image placeholder with text for now or point to a missing path */}
-              <div className="w-full h-full bg-slate-900 flex items-center justify-center flex-col text-neon-green/50 font-mono text-sm">
-                <Terminal size={48} className="mb-2 opacity-50" />
-                [PHOTO_MODULE]
-              </div>
+              <Image
+                src={MoumanePhoto}
+                alt="MOUMANE"
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
 
             {/* Floating badges */}
