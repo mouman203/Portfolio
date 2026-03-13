@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Terminal } from "lucide-react";
 import Image from "next/image";
-import MoumanePhoto from "@/assets/Moumane.jpeg";
 
 const FloatingBadge = ({
   title,
@@ -97,9 +96,10 @@ export default function HomeSection() {
 
             <div className="absolute inset-8 rounded-full overflow-hidden border-2 border-neon-green bg-black shrink-0 shadow-[0_0_30px_rgba(0,255,65,0.2)]">
               <Image
-                src={MoumanePhoto}
+                src="/assets/Moumane.jpeg"
+                fill
                 alt="MOUMANE"
-                className="w-full h-full object-cover"
+                className="object-cover"
                 priority
               />
             </div>
