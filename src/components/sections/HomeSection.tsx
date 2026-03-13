@@ -124,7 +124,7 @@ export default function HomeSection() {
               yOffset={-6}
               delay={2}
             />
-            
+
             {/* Right side */}
             <FloatingBadge
               title="Flutter"
@@ -152,7 +152,7 @@ export default function HomeSection() {
               delay={2.5}
             />
             <FloatingBadge
-              title="C"
+              title="GitHub"
               className="-bottom-2 md:bottom-2 left-1/2 -translate-x-1/2 border-neon-green/20 text-blue-500 z-10"
               yOffset={-6}
               delay={1.2}
